@@ -1,11 +1,213 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>Hayvan Pazarı</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammed Emin Kocabaş - Uygulama Destek & Gizlilik</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #334155;
+            --text-muted: #64748b;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        header p {
+            margin: 10px 0 0 0;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            flex: 1;
+            max-width: 800px;
+            margin: -30px auto 40px auto;
+            padding: 0 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+
+        .card-header {
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        .card-header h2 {
+            margin: 0;
+            color: #0f172a;
+            font-size: 1.8rem;
+        }
+
+        .date {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            display: block;
+            margin-top: 5px;
+        }
+
+        h3 {
+            color: #0f172a;
+            margin-top: 30px;
+            font-size: 1.3rem;
+        }
+
+        ul {
+            padding-left: 20px;
+            color: var(--text-main);
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-box {
+            background-color: #eff6ff;
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #1d4ed8;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            background-color: white;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        @media (max-width: 600px) {
+            .card { padding: 25px; }
+            header { padding: 40px 20px 60px 20px; }
+        }
+    </style>
 </head>
 <body>
-  <h1>Hayvan Pazarı - App Ads</h1>
-  <p>Site başarıyla çalışıyor ✅</p>
+
+    <header>
+        <h1>Muhammed Emin Kocabaş</h1>
+        <p>Mobil Uygulama Geliştiricisi - Destek & Gizlilik Sayfası</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>Uygulama Destek</h2>
+            </div>
+            <p>Merhaba! <strong>Erzurum Kampüs</strong> ve <strong>Hayvan Pazarı</strong> uygulamalarıyla ilgili sorularınız, geri bildirimleriniz veya hesap silme/veri yönetimi talepleriniz için bana ulaşabilirsiniz.</p>
+            <a href="https://www.instagram.com/erzurumkampus/" target="_blank" class="btn">Instagram Üzerinden Ulaşın</a>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Gizlilik Politikası</h2>
+                <span class="date">Son Güncelleme: 14 Mayıs 2026</span>
+            </div>
+            
+            <p>Muhammed Emin Kocabaş ("Geliştirici"), <strong>Erzurum Kampüs</strong> uygulamasını (bundan böyle "Uygulama" olarak anılacaktır) ücretsiz/reklamlı/uygulama içi satın alımlı bir uygulama olarak oluşturmuştur. Bu HİZMET, Geliştirici tarafından sağlanmaktadır ve olduğu gibi kullanılması amaçlanmıştır.</p>
+            
+            <p>Bu sayfa, Uygulamayı kullanmaya karar veren ziyaretçileri, Kişisel Bilgilerin toplanması, kullanılması ve ifşa edilmesiyle ilgili politikalarımız hakkında bilgilendirmek için kullanılmaktadır.</p>
+
+            <h3>Bilgi Toplama ve Kullanım</h3>
+            <p>Hizmetimizi kullanırken size daha iyi bir deneyim sunabilmek amacıyla, Uygulama tarafımızdan bazı kişisel bilgileri sağlamanızı isteyebilir. Uygulamanın temel özellikleri olan ikinci el eşya alım-satımı, kayıp eşya bildirimi ve bağış işlemleri için aşağıdaki bilgileri toplayabiliriz:</p>
+            <ul>
+                <li>Ad ve Soyad</li>
+                <li>E-posta adresi</li>
+                <li>Kullanıcı tarafından oluşturulan içerikler (ilan fotoğrafları, eşya açıklamaları)</li>
+                <li>Cihaz ve kullanım verileri</li>
+            </ul>
+            <p>İstediğimiz bilgiler tarafımızca saklanacak ve bu gizlilik politikasında açıklandığı şekilde kullanılacaktır.</p>
+
+            <p>Uygulama, sizi tanımlamak için kullanılan bilgileri toplayabilen üçüncü taraf hizmetlerini kullanmaktadır. Uygulama tarafından kullanılan üçüncü taraf hizmet sağlayıcıları:</p>
+            <ul>
+                <li>Google Play Services</li>
+                <li>Google Analytics for Firebase</li>
+                <li>Firebase Crashlytics</li>
+            </ul>
+
+            <h3>Güvenlik</h3>
+            <p>Kişisel Bilgilerinizi bize sağlama konusundaki güveninize değer veriyoruz, bu nedenle onu korumak için ticari olarak kabul edilebilir yöntemler kullanmaya çabalıyoruz. Ancak internet üzerinden hiçbir aktarım yönteminin veya elektronik depolama yönteminin %100 güvenli ve güvenilir olmadığını ve mutlak güvenliğini garanti edemeyeceğimizi unutmayın.</p>
+
+            <h3>Bu Gizlilik Politikasındaki Değişiklikler</h3>
+            <p>Gizlilik Politikamızı zaman zaman güncelleyebiliriz. Bu nedenle, herhangi bir değişiklik için bu sayfayı periyodik olarak gözden geçirmeniz önerilir. Yeni Gizlilik Politikasını bu sayfada yayınlayarak herhangi bir değişikliği size bildireceğiz.</p>
+
+            <div class="contact-box">
+                <h3>Bize Ulaşın</h3>
+                <p>Gizlilik Politikamızla ilgili herhangi bir sorunuz veya öneriniz varsa, bizimle iletişime geçmekten çekinmeyin.</p>
+                <p>İletişim: <a href="https://www.instagram.com/erzurumkampus/" target="_blank">@erzurumkampus Instagram Hesabı</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Muhammed Emin Kocabaş. Tüm hakları saklıdır. <br>
+        Bu site uygulama destek ve yasal bilgilendirme amacıyla oluşturulmuştur.
+    </footer>
+
 </body>
 </html>
