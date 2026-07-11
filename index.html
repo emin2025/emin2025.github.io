@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Erzurum Kampüs - Uygulama Destek, Gizlilik Politikası ve İletişim">
-    <meta name="keywords" content="Erzurum Kampüs, destek, gizlilik politikası, ThRoX">
+    <meta name="description" content="ThRoX Apps — FitMap, Erzurum Kampüs ve Hayvan Pazarı için destek, gizlilik politikası ve iletişim">
+    <meta name="keywords" content="FitMap, Erzurum Kampüs, Hayvan Pazarı, destek, gizlilik politikası, ThRoX, üyeliksiz spor salonu">
     <meta name="author" content="ThRoX">
     <meta property="og:title" content="ThRoX Apps — Destek & Gizlilik">
-    <meta property="og:description" content="Erzurum Kampüs uygulaması için destek ve gizlilik politikası.">
+    <meta property="og:description" content="FitMap, Erzurum Kampüs ve Hayvan Pazarı uygulamaları için destek ve gizlilik politikası.">
     <meta property="og:type" content="website">
     <title>ThRoX Apps — Destek & Gizlilik</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -323,6 +323,38 @@
 
         .app-card:hover { transform: translateY(-4px); border-color: rgba(99,102,241,0.3); box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
         .app-card:hover::before { opacity: 1; }
+
+        /* Featured (FitMap) card — emerald identity, always-on top border */
+        .app-card.featured {
+            border-color: rgba(16,185,129,0.35);
+            background: linear-gradient(165deg, rgba(16,185,129,0.12), rgba(255,255,255,0.03) 60%);
+        }
+        .app-card.featured::before {
+            opacity: 1;
+            background: linear-gradient(90deg, #059669, #34D399, #06b6d4);
+        }
+        .app-card.featured:hover {
+            border-color: rgba(16,185,129,0.6);
+            box-shadow: 0 20px 60px rgba(5,150,105,0.25);
+        }
+        .badge-new {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            background: linear-gradient(135deg, #059669, #34D399);
+            color: #fff;
+            font-size: 0.68rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            padding: 5px 14px;
+            border-radius: 100px;
+            box-shadow: 0 0 24px rgba(16,185,129,0.45);
+        }
+        .app-card.featured .tag {
+            background: rgba(16,185,129,0.12);
+            border-color: rgba(16,185,129,0.3);
+            color: #6ee7b7;
+        }
 
         .app-icon {
             width: 64px;
@@ -787,6 +819,30 @@
             <p class="section-desc">Her uygulama kullanıcı ihtiyaçları gözetilerek tasarlanmış, sürekli güncellenen bir deneyim sunar.</p>
         </div>
         <div class="app-grid">
+            <div class="app-card featured reveal">
+                <span class="badge-new">YENİ</span>
+                <div class="app-icon" style="background: linear-gradient(135deg,#059669,#10B981,#34D399); box-shadow: 0 0 40px rgba(16,185,129,0.35);">
+                    <svg width="36" height="36" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M512 140C388 140 288 240 288 364C288 520 512 828 512 828C512 828 736 520 736 364C736 240 636 140 512 140Z" fill="#ffffff"/>
+                        <g fill="#10B981">
+                            <rect x="455" y="345" width="114" height="30" rx="15"/>
+                            <rect x="433" y="315" width="26" height="90" rx="13"/>
+                            <rect x="565" y="315" width="26" height="90" rx="13"/>
+                            <rect x="411" y="330" width="20" height="60" rx="10"/>
+                            <rect x="593" y="330" width="20" height="60" rx="10"/>
+                        </g>
+                    </svg>
+                </div>
+                <h3>FitMap</h3>
+                <p>Üyeliksiz spor salonu deneyimi. Haritadan salon keşfet, QR ile giriş yap, sadece kullandığın dakika kadar öde — ya da dilediğin salondan uygulama içinden üyelik al. Antrenman programları, egzersiz kütüphanesi ve beslenme planları da cebinde.</p>
+                <div class="app-tags">
+                    <span class="tag">Android</span>
+                    <span class="tag">iOS</span>
+                    <span class="tag">Fitness</span>
+                    <span class="tag">QR Giriş</span>
+                    <span class="tag">Kullandıkça Öde</span>
+                </div>
+            </div>
             <div class="app-card reveal">
                 <div class="app-icon">🎓</div>
                 <h3>Erzurum Kampüs</h3>
@@ -870,6 +926,28 @@
         <div class="faq-list reveal">
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>FitMap nasıl çalışıyor? Üyelik almak zorunda mıyım?</span>
+                    <div class="faq-arrow">▾</div>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Hayır, üyelik zorunlu değil. Cüzdanına bakiye yükler, haritadan dilediğin anlaşmalı salonu seçer, girişteki QR kodu okutursun — sadece içeride geçirdiğin dakika kadar ödersin. Dilersen beğendiğin salondan uygulama içinden klasik üyelik paketi de satın alabilirsin.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>FitMap cüzdan bakiyemi iade alabilir miyim?</span>
+                    <div class="faq-arrow">▾</div>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Cüzdana yüklenen bakiye, anlaşmalı salonlarda spor erişim hizmeti almak için yapılan bir <strong>ön ödemedir</strong>; nakde çevrilemez ve iade edilmez. Bakiyeniz için son kullanma süresi yoktur — dilediğiniz zaman dilediğiniz anlaşmalı salonda kullanabilirsiniz. Sorun yaşadığınız bir işlem olursa e-posta ile bize ulaşın, birlikte çözelim.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
                     <span>Hesabımı nasıl silebilirim?</span>
                     <div class="faq-arrow">▾</div>
                 </button>
@@ -946,7 +1024,7 @@
         <div class="reveal">
             <span class="section-label">Gizlilik</span>
             <h2 class="section-title">Gizlilik<br>Politikası</h2>
-            <p class="section-desc">Son Güncelleme: 28 Mayıs 2026 &nbsp;·&nbsp; Erzurum Kampüs ve Hayvan Pazarı uygulamaları için geçerlidir.</p>
+            <p class="section-desc">Son Güncelleme: 11 Temmuz 2026 &nbsp;·&nbsp; FitMap, Erzurum Kampüs ve Hayvan Pazarı uygulamaları için geçerlidir.</p>
         </div>
         <div class="privacy-content">
             <div class="privacy-block reveal">
@@ -970,6 +1048,8 @@
                     <li><strong>Cihaz verileri:</strong> Cihaz modeli, işletim sistemi sürümü, uygulama sürümü</li>
                     <li><strong>Kullanım verileri:</strong> Uygulama içi eylemler, ekran görüntülemeleri (Firebase Analytics)</li>
                     <li><strong>Kilitlenme raporları:</strong> Teknik hata logları (Firebase Crashlytics)</li>
+                    <li><strong>Kamera (yalnızca FitMap):</strong> Salon QR kodunu okutmak için anlık kullanılır; görüntü kaydedilmez, cihazdan dışarı çıkmaz</li>
+                    <li><strong>İşlem kayıtları (yalnızca FitMap):</strong> Bakiye yükleme, üyelik satın alma ve salon giriş/çıkış kayıtları</li>
                 </ul>
             </div>
 
@@ -999,6 +1079,8 @@
                     <li><strong>Google AdMob:</strong> Uygulama içi reklam gösterimi</li>
                     <li><strong>Google Play Services:</strong> Android platform hizmetleri</li>
                     <li><strong>OneSignal:</strong> Anlık bildirim altyapısı</li>
+                    <li><strong>Google Haritalar (FitMap):</strong> Salonları harita üzerinde gösterme</li>
+                    <li><strong>iyzico (FitMap):</strong> Güvenli ödeme altyapısı — kart bilgileriniz bize değil, doğrudan iyzico'ya iletilir; tarafımızca asla görülmez ve saklanmaz</li>
                 </ul>
                 <p class="privacy-highlight">Bu servisler tarafından toplanan veriler ilgili şirketlerin gizlilik politikasına tabidir. Bizim erişimimiz bulunmamaktadır.</p>
             </div>
@@ -1057,6 +1139,20 @@
             <div class="privacy-block reveal">
                 <div class="privacy-block-header">
                     <div class="privacy-num">09</div>
+                    <h3>Ödeme ve Cüzdan (FitMap)</h3>
+                </div>
+                <p>FitMap üzerinden yapılan tüm ödemeler, BDDK lisanslı ödeme kuruluşu <strong>iyzico</strong> aracılığıyla gerçekleştirilir. Kart bilgileriniz uygulamamız tarafından görülmez, işlenmez ve saklanmaz.</p>
+                <ul>
+                    <li><strong>Cüzdan bakiyesi:</strong> Uygulamaya yüklediğiniz bakiye, FitMap'in anlaşmalı spor salonlarında sunduğu spor erişim hizmetinden yararlanmak için yapılan bir <strong>ön ödemedir</strong>. Bir mevduat, elektronik para veya nakit hesabı değildir.</li>
+                    <li><strong>Nakde çevrilemez:</strong> Cüzdan bakiyesi ve XP puanları nakde çevrilemez, üçüncü kişilere devredilemez ve iade edilmez.</li>
+                    <li><strong>Kullanım alanı:</strong> Bakiye yalnızca FitMap'in anlaşmalı olduğu tesislerde, uygulama üzerinden sunulan hizmetler için kullanılabilir. Ödeme ilişkiniz yalnızca FitMap iledir.</li>
+                    <li><strong>XP puanları:</strong> XP satın alınamaz; yalnızca uygulama içi etkinliklerle (bakiye yükleme, davet) kazanılır ve dilerseniz kullanılabilir bakiyeye çevrilebilir.</li>
+                </ul>
+            </div>
+
+            <div class="privacy-block reveal">
+                <div class="privacy-block-header">
+                    <div class="privacy-num">10</div>
                     <h3>Politika Güncellemeleri</h3>
                 </div>
                 <p>Bu gizlilik politikasını zaman zaman güncelleyebiliriz. Önemli değişiklikler için uygulama içi bildirim veya bu sayfa aracılığıyla bilgilendirme yapılacaktır. Güncel politikayı takip etmek için bu sayfayı periyodik olarak ziyaret etmenizi öneririz.</p>
